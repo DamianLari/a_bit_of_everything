@@ -1,0 +1,2 @@
+asyncua==0.9.93
+pyniryo==1.2.1
