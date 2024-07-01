@@ -1,0 +1,197 @@
+[
+    {
+        "id": "a600ebf9c686f9ce",
+        "type": "tab",
+        "label": "Flux 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "1b916296930c6184",
+        "type": "mqtt out",
+        "z": "a600ebf9c686f9ce",
+        "name": "",
+        "topic": "niryo_todo",
+        "qos": "",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "08715b50c2d26fbe",
+        "x": 1090,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "e315320077086227",
+        "type": "mqtt in",
+        "z": "a600ebf9c686f9ce",
+        "name": "",
+        "topic": "niryo_state",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "08715b50c2d26fbe",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 420,
+        "y": 400,
+        "wires": [
+            [
+                "ddc6df5def9cd089"
+            ]
+        ]
+    },
+    {
+        "id": "ddc6df5def9cd089",
+        "type": "debug",
+        "z": "a600ebf9c686f9ce",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1070,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "6980513a15061397",
+        "type": "inject",
+        "z": "a600ebf9c686f9ce",
+        "name": "release_with_tool",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "release_with_tool",
+        "payloadType": "str",
+        "x": 520,
+        "y": 100,
+        "wires": [
+            [
+                "1b916296930c6184"
+            ]
+        ]
+    },
+    {
+        "id": "1c0aaf7e05269635",
+        "type": "inject",
+        "z": "a600ebf9c686f9ce",
+        "name": "grasp_with_tool",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "grasp_with_tool",
+        "payloadType": "str",
+        "x": 520,
+        "y": 140,
+        "wires": [
+            [
+                "1b916296930c6184"
+            ]
+        ]
+    },
+    {
+        "id": "8d86cd5ae660aaba",
+        "type": "inject",
+        "z": "a600ebf9c686f9ce",
+        "name": "move_pose {\"x\": 0.2, \"y\": -0.2, \"z\": 0.2, \"rx\": 0.0, \"ry\": 1.57, \"rz\": 0.0}",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "move_pose {\"x\": 0.2, \"y\": -0.2, \"z\": 0.2, \"rx\": 0.0, \"ry\": 1.57, \"rz\": 0.0}",
+        "payloadType": "str",
+        "x": 360,
+        "y": 180,
+        "wires": [
+            [
+                "1b916296930c6184"
+            ]
+        ]
+    },
+    {
+        "id": "1145add273fe41ad",
+        "type": "inject",
+        "z": "a600ebf9c686f9ce",
+        "name": "move_pose {\"x\": 0.2, \"y\": 0.2, \"z\": 0.2, \"rx\": 0.0, \"ry\": 1.57, \"rz\": 0.0}",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "move_pose {\"x\": 0.2, \"y\": 0.2, \"z\": 0.2, \"rx\": 0.0, \"ry\": 1.57, \"rz\": 0.0}",
+        "payloadType": "str",
+        "x": 360,
+        "y": 220,
+        "wires": [
+            [
+                "1b916296930c6184"
+            ]
+        ]
+    },
+    {
+        "id": "08715b50c2d26fbe",
+        "type": "mqtt-broker",
+        "name": "broker",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    }
+]

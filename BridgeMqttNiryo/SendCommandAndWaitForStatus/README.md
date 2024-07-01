@@ -26,7 +26,6 @@ Les bibliothèques **`paho-mqtt`** et **`pyniryo`** sont nécessaires pour ce sc
 Installez-les en utilisant pip, le gestionnaire de paquets de Python :
 
 ```bash
-bashCopy code
 pip install paho-mqtt
 pip install pyniryo  # Cette bibliothèque peut nécessiter des étapes d'instal
 ```
