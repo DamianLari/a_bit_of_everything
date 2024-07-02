@@ -12,9 +12,6 @@ def play_midi(file_path):
     while pygame.mixer.music.get_busy():
         time.sleep(1)
 
-
-
-
 def invert_midi(input_file, output_file, inversion_point=60):
     original_midi = MidiFile(input_file)
     inverted_midi = MidiFile()
