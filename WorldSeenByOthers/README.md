@@ -53,7 +53,7 @@ pip install opencv-python numpy
 ## Exemple de Commande
 
 ```bash
-python simulate_color_vision.py
+python main.py
 ```
 
 Dans cet exemple, le script transformera la vidéo ou l'image spécifiée en simulant la vision du type défini dans `vision_type`.
