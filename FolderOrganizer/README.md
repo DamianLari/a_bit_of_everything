@@ -30,5 +30,5 @@ Aucune installation supplémentaire n'est nécessaire en dehors de Python. Assur
 
 Pour organiser les fichiers dans les dossiers `Documents` et `Downloads`, utilisez :
 ```bash
-python organize_folders.py C:/Users/VotreNom/Documents C:/Users/VotreNom/Downloads
+python main.py C:/Users/VotreNom/Documents C:/Users/VotreNom/Downloads
 ```

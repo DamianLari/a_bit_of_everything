@@ -28,5 +28,5 @@ pip install pyautogui
 - Pour exécuter l'autoclicker avec un délai de 0.1 seconde entre les clics pendant une durée de 10 secondes :
 
   ```bash
-  python autoclicker.py 0.1 10
+  python main.py 0.1 10
   ```
